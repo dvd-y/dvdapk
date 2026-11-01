@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="iw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b5f7a">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SDVD">
+    <title>DVD Explorer</title>
+    <style>
+@font-face{font-family:'Dvdai2';src:url(data:font/ttf;base64,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BgcGFRQWFxYzMjc+ATU0JzYzMhYXHgEUBgcGIhUUFhcWFRQjIicuATU0NzY1JyLJFBgZKAcEEhYUBREaFwuABS0cGhQVCwwXIz5YExoPBAwsfBgTAQYBuBMqJRoGExIFBBAOFBsoRgkMFhYcPhsVIAcMVwcLCQcCCKo1GS4oAgEAAQAxAJEBUQH7ACcAABMmNTQzMhcWFxYVFCMiNTQmJy4BIyIVFBcWFRQGBwYjIicmNz4BNTSIAwoLMUsoEwgKHw0QPxIGAQIcIx0MBgULCjQhAc8SChAgMlwrWykGHYQdIUArGxEmD0FCExAFCwMUQVRaAAAAABAAxgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADACkADQABAAAAAAAEAA4ANgABAAAAAAAFAA8ARAABAAAAAAAGAA4AUwABAAAAAAAKABwAYQADAAEECQABAAwAfQADAAEECQACAA4AiQADAAEECQADAFIAlwADAAEECQAEABwA6QADAAEECQAFAB4BBQADAAEECQAGABwBIwADAAEECQAKADgBPwADAAEECQAQAAwAfQADAAEECQARAA4AiUR2ZGFpMlJlZ3VsYXJDYWxsaWdyYXBociA6IER2ZGFpMiBSZWd1bGFyIDogMTMtMTAtMjAyNkR2ZGFpMiBSZWd1bGFyVmVyc2lvbiAwMDEuMDAyRHZkYWkyLVJlZ3VsYXJDcmVhdGVkIHdpdGggQ2FsbGlncmFwaHIuY29tAEQAdgBkAGEAaQAyAFIAZQBnAHUAbABhAHIAQwBhAGwAbABpAGcAcgBhAHAAaAByACAAOgAgAEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgAgADoAIAAxADMALQAxADAALQAyADAAMgA2AEQAdgBkAGEAaQAyACAAUgBlAGcAdQBsAGEAcgBWAGUAcgBzAGkAbwBuACAAMAAwADEALgAwADAAMgBEAHYAZABhAGkAMgAtAFIAZQBnAHUAbABhAHIAQwByAGUAYQB0AGUAZAAgAHcAaQB0AGgAIABDAGEAbABsAGkAZwByAGEAcABoAHIALgBjAG8AbQAAAAACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAABAAIBAgADAAQABQAIAAkACgALAAwADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeACAAIgAjAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIBEwEUARUBFgEXARgBGQEaARsBHAEdAR4CQ1IEbmJzcAlhZmlpNTc2NjQJYWZpaTU3NjY1CWFmaWk1NzY2NglhZmlpNTc2NjcJYWZpaTU3NjY4CWFmaWk1NzY2OQlhZmlpNTc2NzAJYWZpaTU3NjcxCWFmaWk1NzY3MglhZmlpNTc2NzMJYWZpaTU3Njc0CWFmaWk1NzY3NQlhZmlpNTc2NzYJYWZpaTU3Njc3CWFmaWk1NzY3OAlhZmlpNTc2NzkJYWZpaTU3NjgwCWFmaWk1NzY4MQlhZmlpNTc2ODIJYWZpaTU3NjgzCWFmaWk1NzY4NAlhZmlpNTc2ODUJYWZpaTU3Njg2CWFmaWk1NzY4NwlhZmlpNTc2ODgJYWZpaTU3Njg5CWFmaWk1NzY5MAABAAH//wAP) format('truetype');font-weight:100 900;font-style:normal;font-display:block;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:60%;unicode-range:U+0041-005A;}
+@font-face{font-family:'DvdaiLatin';src:local('Arial'),local('ArialMT'),local('Helvetica Neue'),local('Helvetica'),local('Roboto'),local('Liberation Sans'),local('Segoe UI');size-adjust:70%;unicode-range:U+0061-007A;}
+
+        :root {
+            --chrome-bg: #dee1e6;
+            --chrome-toolbar: #ffffff;
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+        }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--chrome-bg);
+            overflow: hidden;
+        }
+
+        /* סרגל טאבים */
+        .tabs-container { display: flex; align-items: flex-end; padding: 8px 8px 0; gap: 4px; background: #dee1e6; }
+        .tab {
+            background: #bdc1c6; padding: 8px 15px; border-radius: 8px 8px 0 0;
+            font-size: max(1rem, calc(12px * var(--fs-scale))); min-width: 130px; display: flex; align-items: center; 
+            justify-content: space-between; cursor: pointer; border: none; position: relative;
+        }
+        .tab.active { background: white; color: black; z-index: 2; }
+        .tab-close { font-size: max(1rem, calc(14px * var(--fs-scale))); margin-right: 10px; opacity: 0.6; }
+        .tab-close:hover { opacity: 1; color: var(--google-red); }
+        .add-tab-btn { background: none; border: none; font-size: calc(20px * var(--fs-scale)); cursor: pointer; padding: 5px 10px; color: #5f6368; }
+
+        /* סרגל כלים (Toolbar) */
+        .toolbar {
+            background: white; padding: 5px 10px; display: flex; align-items: center; 
+            gap: 12px; border-bottom: 1px solid #dfe1e5;
+        }
+        .nav-group { display: flex; gap: 8px; }
+        .nav-btn { background: none; border: none; font-size: calc(18px * var(--fs-scale)); color: #5f6368; cursor: pointer; border-radius: 50%; width: 34px; height: 34px; }
+        .nav-btn:hover { background: #f1f3f4; }
+        
+        .address-bar {
+            flex-grow: 1; background: #f1f3f4; border-radius: 25px; padding: 7px 18px;
+            display: flex; align-items: center; gap: 10px; border: 1px solid transparent;
+        }
+        .address-bar:focus-within { background: white; border-color: var(--google-blue); box-shadow: 0 0 5px rgba(66,133,244,0.3); }
+        .address-bar input { border: none; background: none; width: 100%; outline: none; font-size: max(1rem, calc(14px * var(--fs-scale))); }
+
+        /* שורת סימניות */
+        .bookmarks-bar { background: white; padding: 5px 15px; display: flex; gap: 15px; font-size: max(1rem, calc(13px * var(--fs-scale))); border-bottom: 1px solid #dfe1e5; }
+        .bookmark { cursor: pointer; color: #3c4043; display: flex; align-items: center; gap: 5px; }
+        .bookmark:hover { text-decoration: underline; }
+
+        /* אזור התוכן */
+        .content-main { height: calc(100vh - 120px); position: relative; background: white; }
+        .iframe-layer { width: 100%; height: 100%; border: none; display: none; }
+
+        /* דף הבית (New Tab) */
+        .home-screen {
+            width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center;
+            padding-top: 60px; background-size: cover; background-position: center; transition: 0.4s;
+        }
+        .home-content { 
+            background: rgba(255,255,255,0.9); padding: 40px; border-radius: 20px; 
+            text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); backdrop-filter: blur(5px);
+        }
+        .logo-text { font-size: calc(50px * var(--fs-lg)); font-weight: bold; margin-bottom: 20px; font-family: 'Product Sans', Arial; }
+
+        /* כפתור התאמה אישית */
+        .customize-btn {
+            position: absolute; bottom: 20px; left: 20px;
+            background: white; border: 1px solid #dfe1e5; padding: 8px 15px;
+            border-radius: 20px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: max(1rem, calc(13px * var(--fs-scale)));
+        }
+        .customize-btn:hover { background: #f8f9fa; }
+
+        .bg-menu {
+            position: absolute; bottom: 60px; left: 20px; background: white; 
+            border: 1px solid #ccc; border-radius: 10px; padding: 10px; display: none; flex-direction: column; gap: 5px; z-index: 100;
+        }
+        .bg-option { padding: 8px; cursor: pointer; border-radius: 5px; }
+        .bg-option:hover { background: #eee; }
+
+    
+/* ===== גופן, גודל, קריאות ורספונסיביות ===== */
+:root{--fs-scale:1.7;--fs-lg:calc(1 + (var(--fs-scale) - 1) * 0.5);}
+*,*::before,*::after,input,button,textarea,select,option{font-family:'Dvdai2','DvdaiLatin','Arial Hebrew',Arial,sans-serif !important;}
+*,*::before,*::after,input::placeholder{-webkit-text-stroke:0.45px;text-shadow:none !important;}
+.__none{-webkit-text-stroke:0;}
+html{-webkit-text-size-adjust:100%%;}
+.scrollx,.chat-area,.fridge-area,.modal-overlay,.categories,.category-bar{-webkit-overflow-scrolling:touch;}
+@media(max-width:1100px){:root{--fs-scale:1.55;}}
+@media(max-width:640px){:root{--fs-scale:1.4;}*{letter-spacing:.5px !important;}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;}}
+
+body,html{height:100%;}
+body{display:flex;flex-direction:column;height:100vh;height:100dvh;}
+.tabs-container{flex:0 0 auto;overflow-x:auto;scrollbar-width:none;padding-top:max(8px,env(safe-area-inset-top));}
+.tabs-container::-webkit-scrollbar{display:none;}
+.tab{flex:0 0 auto;min-width:130px;}
+.toolbar{flex:0 0 auto;flex-wrap:nowrap;}
+.address-bar{min-width:0;}
+.address-bar input{min-width:0;color:#000;}
+.address-bar input::placeholder{color:#3a4654;opacity:1;}
+.bookmarks-bar{flex:0 0 auto;overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.bookmarks-bar::-webkit-scrollbar{display:none;}
+.bookmark{flex:0 0 auto;color:#000;}
+.content-main{flex:1 1 auto;height:auto !important;min-height:0;}
+.home-content{max-width:calc(100% - 32px);}
+.bg-menu{bottom:calc(60px + env(safe-area-inset-bottom));}
+.customize-btn{bottom:calc(20px + env(safe-area-inset-bottom));}
+@media(max-width:640px){
+  .toolbar{padding:5px 6px;gap:6px;}
+  .nav-group{gap:2px;}
+  .nav-btn{width:40px;height:40px;}
+  .address-bar{padding:7px 12px;}
+  .toolbar > div:last-child{display:none;}
+  .home-screen{padding-top:24px;}
+  .home-content{padding:24px 18px;}
+  .logo-text{font-size:calc(36px * var(--fs-lg)) !important;}
+  .customize-btn{left:12px;}
+}
+@media(max-height:520px) and (orientation:landscape){.home-screen{padding-top:10px;}}
+
+
+/* ===== PWA: כפתור חזרה לתפריט (רק כשהאתר מותקן כאפליקציה) ===== */
+.pwa-home{display:none;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9000;width:calc(30px + env(safe-area-inset-left));height:64px;padding-left:env(safe-area-inset-left);border-radius:0 16px 16px 0;background:rgba(11,95,122,.88);color:#fff;font-size:18px;align-items:center;justify-content:center;text-decoration:none;box-shadow:2px 2px 12px rgba(0,0,0,.2);-webkit-text-stroke:0 !important;}
+@media (display-mode:standalone){.pwa-home{display:flex;}}
+html.standalone .pwa-home{display:flex;}
+</style>
+</head>
+<body>
+
+    <div class="tabs-container" id="tabs-bar">
+        <button class="add-tab-btn" onclick="addNewTab()">+</button>
+    </div>
+
+    <div class="toolbar">
+        <div class="nav-group">
+            <button class="nav-btn" onclick="goBack()">➔</button>
+            <button class="nav-btn" onclick="goForward()" style="opacity:0.4">⬅</button>
+            <button class="nav-btn" onclick="refreshPage()">↻</button>
+            <button class="nav-btn" onclick="goHome()">🏠</button>
+        </div>
+        <div class="address-bar">
+            <span>🔒</span>
+            <input type="text" id="url-input" placeholder="חפש באתרים של דוד או הקלד כתובת..." onkeypress="navigateTo(event)">
+        </div>
+        <div style="padding: 0 10px;"><div style="width:30px; height:30px; background:#8e24aa; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:max(1rem, calc(14px * var(--fs-scale)));">D</div></div>
+    </div>
+
+    <div class="bookmarks-bar">
+        <div class="bookmark" onclick="quickNav('מתכונים')">🍳 מתכונים</div>
+        <div class="bookmark" onclick="quickNav('טטריס')">🎮 טטריס</div>
+        <div class="bookmark" onclick="quickNav('קוביה')">🎲 קוביה</div>
+        <div class="bookmark" onclick="quickNav('ai')">🤖 AI</div>
+    </div>
+
+    <div class="content-main" id="main-view">
+        </div>
+
+    <div class="bg-menu" id="bg-menu">
+        <div class="bg-option" onclick="changeBg('none')">⚪ ללא רקע (לבן)</div>
+        <div class="bg-option" onclick="changeBg('1')">🌌 חלל</div>
+        <div class="bg-option" onclick="changeBg('2')">🏔️ טבע</div>
+        <div class="bg-option" onclick="changeBg('3')">🌃 עיר בלילה</div>
+    </div>
+
+    <button class="customize-btn" onclick="toggleBgMenu()">✏️ התאמה אישית</button>
+
+    <script>
+        const mySites = {
+            "מתכונים": "https://sdvdm.netlify.app",
+            "ai": "https://dvdai.netlify.app",
+            "פורטל": "https://sdvd.netlify.app",
+            "newai": "https://dvdaipro.netlify.app",
+            "html": "https://dvdhtml.netlify.app",
+            "טטריס": "https://detris.netlify.app",
+            "קוביה": "https://dvdcube.netlify.app"
+        };
+
+        const bgUrls = {
+            "1": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600",
+            "2": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600",
+            "3": "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=1600"
+        };
+
+        let tabs = [];
+        let activeId = null;
+
+        function addNewTab() {
+            const id = Date.now();
+            tabs.push({ id, url: '', title: 'טאב חדש' });
+            switchTab(id);
+        }
+
+        function switchTab(id) {
+            activeId = id;
+            const tab = tabs.find(t => t.id === id);
+            document.getElementById('url-input').value = tab.url;
+            
+            const view = document.getElementById('main-view');
+            view.innerHTML = '';
+
+            if (tab.url === '') {
+                const currentBg = localStorage.getItem('dvd_explorer_bg');
+                const bgStyle = currentBg && currentBg !== 'none' ? `background-image:url(${bgUrls[currentBg]})` : 'background:white';
+                
+                view.innerHTML = `
+                    <div class="home-screen" style="${bgStyle}">
+                        <div class="home-content">
+                            <div class="logo-text">
+                                <span style="color:var(--google-blue)">D</span><span style="color:var(--google-red)">V</span><span style="color:var(--google-yellow)">D</span>
+                                <span style="color:var(--google-blue)">E</span><span style="color:var(--google-green)">x</span><span style="color:var(--google-red)">p</span>
+                            </div>
+                            <p style="color:#5f6368">איזה אתר של דוד נחקור היום?</p>
+                        </div>
+                    </div>`;
+            } else {
+                const ifr = document.createElement('iframe');
+                ifr.className = 'iframe-layer';
+                ifr.style.display = 'block';
+                ifr.src = tab.url;
+                view.appendChild(ifr);
+            }
+            renderTabs();
+        }
+
+        function renderTabs() {
+            const bar = document.getElementById('tabs-bar');
+            bar.querySelectorAll('.tab').forEach(n => n.remove());
+            tabs.forEach(t => {
+                const div = document.createElement('div');
+                div.className = `tab ${t.id === activeId ? 'active' : ''}`;
+                div.onclick = () => switchTab(t.id);
+                div.innerHTML = `<span>🌐 ${t.title}</span><span class="tab-close" onclick="closeTab(event, ${t.id})">×</span>`;
+                bar.insertBefore(div, bar.lastElementChild);
+            });
+        }
+
+        function navigateTo(e) {
+            if (e.key === 'Enter') {
+                const val = e.target.value.trim();
+                const tab = tabs.find(t => t.id === activeId);
+                tab.url = mySites[val] || (val.startsWith('http') ? val : 'https://' + val);
+                tab.title = val;
+                switchTab(activeId);
+            }
+        }
+
+        function quickNav(name) {
+            const tab = tabs.find(t => t.id === activeId);
+            tab.url = mySites[name];
+            tab.title = name;
+            switchTab(activeId);
+        }
+
+        function closeTab(e, id) {
+            e.stopPropagation();
+            tabs = tabs.filter(t => t.id !== id);
+            if (tabs.length === 0) addNewTab();
+            else if (activeId === id) switchTab(tabs[0].id);
+            else renderTabs();
+        }
+
+        function goHome() {
+            const tab = tabs.find(t => t.id === activeId);
+            tab.url = ''; tab.title = 'טאב חדש';
+            switchTab(activeId);
+        }
+
+        function refreshPage() { switchTab(activeId); }
+        function goBack() { goHome(); }
+
+        /* ניהול רקעים */
+        function toggleBgMenu() {
+            const menu = document.getElementById('bg-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function changeBg(type) {
+            localStorage.setItem('dvd_explorer_bg', type);
+            document.getElementById('bg-menu').style.display = 'none';
+            switchTab(activeId);
+        }
+
+        // הפעלה
+        addNewTab();
+    </script>
+<a class="pwa-home" href="index.html" aria-label="חזרה לתפריט">🏠</a>
+<script>
+if(navigator.standalone)document.documentElement.classList.add('standalone');
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>
